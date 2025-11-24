@@ -2,7 +2,7 @@ import time
 import requests, json
 from influxdb import InfluxDBClient as influxdb
 import serial
-seri = serial.Serial('/dev/ttyACMO',baudrate = 9600,timeout=None)
+seri = serial.Serial('/dev/ttyACM0',baudrate = 9600,timeout=None)
 while(True):
     time.sleep(1)
     if seri.in_waiting != 0:
